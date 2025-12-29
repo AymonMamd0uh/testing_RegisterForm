@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenGrocery - Testing Lab</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #e8f5e9; }
+        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); width: 350px; }
+        h2 { color: #1b5e20; text-align: center; margin-bottom: 20px; }
+        input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-size: 14px; }
+        button { width: 100%; padding: 12px; background-color: #43a047; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #2e7d32; }
+        .success-screen { display: none; text-align: center; }
+        .success-screen h1 { color: #2e7d32; }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="regForm">
+        <h2>GreenGrocery</h2>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="email" placeholder="Email Address">
+        <input type="password" id="pass" placeholder="Password">
+        <input type="password" id="c_pass" placeholder="Confirm Password">
+        
+        <button onclick="handleRegister()">Register</button>
+    </div>
+
+    <div class="card success-screen" id="successPage">
+        <h1>Welcome Home! ✅</h1>
+        <p>Your account has been created successfully.</p>
+        <button onclick="location.reload()" style="background-color: #757575;">Logout</button>
+    </div>
+
+    <script>
+        function handleRegister() {
+            // Logic Bug: Redirects without checking any Acceptance Criteria
+            document.getElementById('regForm').style.display = 'none';
+            document.getElementById('successPage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
